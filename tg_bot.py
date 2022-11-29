@@ -60,7 +60,7 @@ def process_game(message):
         bot.send_message(message.chat.id, reply)
     else:
         reply = f'{show_game_field(NEW_GAME.buttons)}\n' \
-                f'Введите номер ряда (1-3) и столбца (1-3) через пробел {ARROW_SYMBOL}'
+                f'Введите номер ряда (от 1 до 3) и столбца (от 1 до 3) через дефис, например: "1-2" {ARROW_SYMBOL}'
         msg = bot.send_message(message.chat.id, reply)
         bot.register_next_step_handler(msg, process_next_move)
 
@@ -72,10 +72,10 @@ def process_next_move(message):
                 handler['function'](message)
                 return
 
-    move = message.text.split()
+    move = message.text.split('-')
 
     if len(move) != 2:
-        msg = bot.reply_to(message, 'Неверный формат ввода, введите 2 числа через пробел.')
+        msg = bot.reply_to(message, 'Неверный формат ввода, введите 2 числа через дефис.')
         bot.register_next_step_handler(msg, process_next_move)
         return
 

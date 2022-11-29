@@ -9,4 +9,3 @@
 
 <img alt="game1.png" src="img/game1.png" width="800"/>
 <img alt="game2.png" src="img/game2.png" width="800"/>
-<img alt="game3.png" src="img/game3.png" width="800"/>
