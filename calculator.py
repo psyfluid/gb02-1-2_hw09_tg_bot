@@ -1,4 +1,5 @@
 import re
+from math import *
 
 
 def isnumber(n):

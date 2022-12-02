@@ -690,4 +690,13 @@ FodyWeavers.xsd
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,visualstudio,visualstudiocode,python
 
+# macOS
+__MACOSX
+.DS_Store
+
+# project
 config.py
+log.csv
+photos/
+model/
+DeepFashion2/
